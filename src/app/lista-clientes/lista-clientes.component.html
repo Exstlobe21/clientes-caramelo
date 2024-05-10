@@ -1,0 +1,35 @@
+<h2>Clientes VIP </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> ID_Clientes </th>
+            <th> Nombres </th>
+            <th> Apellidos </th>
+            <th> Cedula </th>
+            <th> Telefono </th>
+            <th> Direccion </th>
+            <th> Modificaciones </th>
+            
+            
+        </tr>
+
+    
+    </thead> 
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <td>{{cliente.idCliente}} </td>
+            <td>{{cliente.nombres}} </td>
+            <td>{{cliente.apellidos}} </td>
+            <td>{{cliente.cedula}} </td>
+            <td>{{cliente.telefono}} </td>
+            <td>{{cliente.direccion}} </td>
+            <td>
+                <button (click)="actualizarCliente(cliente.idCliente)" class="btn btn-info">Actualizar</button>
+                <button (click)="eliminarCliente(cliente.idCliente)" class="btn btn-danger" style="margin-left: 5px">Eliminar</button>
+             </td>
+
+        </tr>
+
+    </tbody>
+</table>
+

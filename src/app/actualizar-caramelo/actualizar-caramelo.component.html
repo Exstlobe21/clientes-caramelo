@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Actulizar Cliente</h3>
+    <form (ngSubmit) = "onSubmit()">
+      
+        <!----Nombres ---->
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text" class="form-control" id="nombre"
+            [(ngModel)]="caramelo.nombre" name="nombre" required>
+        </div>
+            <!----Precio ---->
+        <div class="form-group">
+            <label>Precio :</label>
+            <input type="text" class="form-control" id="precio"
+            [(ngModel)]="caramelo.precio" name="precio" required>
+        </div>
+        <!----Descripcion ---->
+        <div class="form-group">
+            <label>Descripcion :</label>
+            <input type="text" class="form-control" id="descripcion"
+            [(ngModel)]="caramelo.descripcion" name="descripcion" required>
+
+            
+        </div>
+            <br>
+            <button class ="btn btn-success" >Guardar</button>
+    </form>
+</div>

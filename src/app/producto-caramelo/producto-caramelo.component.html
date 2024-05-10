@@ -1,0 +1,26 @@
+<h2>Lista de caramelos</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> ID_Caramelo </th>
+            <th> Nombre del Caramelo </th>
+            <th> Precio - Costo </th>
+            <th> Descripcion </th>
+            <th> Modificaciones </th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr *ngFor="let caramelo of caramelos">
+            <td>{{caramelo.idCaramelo}} </td>
+            <td>{{caramelo.nombre}} </td>
+            <td>{{caramelo.precio}} </td>
+            <td>{{caramelo.descripcion}} </td>
+
+             <td>
+                <button (click)="actualizarCaramelos(caramelo.idCaramelo)" class="btn btn-info">Actualizar</button>
+                <button (click)="eliminarCaramelos(caramelo.idCaramelo)" class="btn btn-danger" style="margin-left: 5px">Eliminar</button>
+             </td>
+        </tr>
+
+    </tbody>
+</table>

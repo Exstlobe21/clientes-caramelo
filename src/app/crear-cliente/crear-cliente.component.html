@@ -1,0 +1,40 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Añadir Cliente VIP</h3>
+    <form (ngSubmit) = "onSubmit()">
+      
+        <!----Nombres ---->
+        <div class="form-group">
+            <label>Nombres :</label>
+            <input type="text" class="form-control" id="nombres"
+            [(ngModel)]="cliente.nombres" name="nombres" required>
+        </div>
+            <!----apellido ---->
+        <div class="form-group">
+            <label>Apellidos :</label>
+            <input type="text" class="form-control" id="apellidos"
+            [(ngModel)]="cliente.apellidos" name="apellidos" required> 
+        </div>
+        <!----cedula ---->
+        <div class="form-group">
+            <label>Célula:</label>
+            <input type="text" class="form-control" id="cedula"
+            [(ngModel)]="cliente.cedula" name="cedula" required>
+
+            
+        </div>
+        <!----telefono ---->
+        <div class="form-group">
+                <label>Telefono :</label>
+                <input type="text" class="form-control" id="telefono"
+                [(ngModel)]="cliente.telefono" name="telefono" required>
+            </div>
+        <!----direccion ---->
+        <div class="form-group">
+                <label>Direccion :</label>
+                <input type="text" class="form-control" id="direccion"
+                [(ngModel)]="cliente.direccion" name="direccion" required>
+            </div>
+            <br>
+            <button class ="btn btn-success" type="submit">Guardar</button>
+    </form>
+</div>
